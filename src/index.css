@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }
+
+/* Design tokens */
+:root {
+  --dds-primary: #c1121f;   /* festive red */
+  --dds-accent:  #d4af37;   /* gold */
+  --dds-bg:      #fffaf3;   /* off-white */
+  --dds-foreground: #1f2937; /* slate-800 */
+  --dds-muted:   #f7e6e6;   /* soft red tint */
+  --dds-radius:  0.75rem;
+}
+
+/* Semantic helpers mapped to tokens (avoid direct colors) */
+.bg-background { background-color: var(--dds-bg); }
+.text-foreground { color: var(--dds-foreground); }
+.bg-primary { background-color: var(--dds-primary); }
+.text-primary { color: var(--dds-primary); }
+.bg-accent { background-color: var(--dds-accent); }
+.text-accent { color: var(--dds-accent); }
+.border-accent { border-color: var(--dds-accent); }
+.border-muted { border-color: var(--dds-muted); }
+.bg-muted { background-color: var(--dds-muted); }
+
+/* Rounding utility using token */
+.rounded-token { border-radius: var(--dds-radius); }
