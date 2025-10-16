@@ -13,10 +13,10 @@ export default function Hero() {
     mouseRepulsion={true}
     mouseInteraction={true}
     density={1}
-    glowIntensity={0.4}
+    glowIntensity={1}
     saturation={0.2}
-    hueShift={240}
-    twinkleIntensity={0.2}
+    hueShift={340}
+    twinkleIntensity={0.8}
     rotationSpeed={0.1}
     repulsionStrength={2}
     autoCenterRepulsion={0}
@@ -28,7 +28,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
       <div className="absolute inset-0 flex items-center justify-center text-center px-4">
         <div className="max-w-4xl">
-          <h1 className="text-pretty text-amber-700 text-3xl md:text-5xl font-extrabold text-white drop-shadow">
+          <h1 className="text-pretty text-primary text-3xl md:text-5xl font-extrabold drop-shadow">
             
             <Typewriter
               words={[t.hero.title]}
