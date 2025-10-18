@@ -6,6 +6,7 @@ import Gallery from "./components/Gallery.jsx"
 import ContactForm from "./components/ContactForm.jsx"
 import Footer from "./components/Footer.jsx"
 import { I18nProvider } from "./components/i18n.jsx"
+import SoundLayer from "./components/SoundLayer";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Navbar />
         <main>
           <Hero />
+          <SoundLayer />
           <About />
           <Gallery />
           <ContactForm />
