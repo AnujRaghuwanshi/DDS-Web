@@ -29,7 +29,7 @@ export default function SoundLayer() {
   return (
     <button
       onClick={toggleSound}
-      className="fixed bottom-6 right-6 bg-gradient-to-r from-amber-500/70 to-yellow-400/70 hover:from-amber-400/80 hover:to-yellow-300/80 text-white p-3 rounded-full shadow-lg backdrop-blur-md transition-all duration-300"
+      className="fixed bottom-6 right-6 z-[999] bg-gradient-to-r from-amber-500/70 to-yellow-400/70 hover:from-amber-400/80 hover:to-yellow-300/80 text-white p-3 rounded-full shadow-lg backdrop-blur-md transition-all duration-300"
     >
       {isPlaying ? <Volume2 size={24} /> : <VolumeX size={24} />}
     </button>
