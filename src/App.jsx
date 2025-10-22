@@ -17,6 +17,7 @@ export default function App() {
       
        {isLoading ? (
         <SplashScreen onFinish={() => setIsLoading(false)} />
+        
       ) : (
         <div className="fade-in bg-background text-foreground min-h-screen">
           <Navbar />
