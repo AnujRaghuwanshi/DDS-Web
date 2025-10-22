@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 
 export default function SoundLayer() {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState("");
   const audioRef = useRef(null);
 
   useEffect(() => {
