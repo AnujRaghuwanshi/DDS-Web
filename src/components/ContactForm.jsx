@@ -23,7 +23,7 @@ export default function ContactForm() {
              className="py-20 px-4"
              initial={{ opacity: 0, y: 50 }}       // start hidden, slightly down
              whileInView={{ opacity: 1, y: 0 }}    // animate to visible and move up
-             viewport={{ once: false, amount: 0.2 }} // trigger when 20% is in view, only once
+             viewport={{ once: false}}             
              transition={{ duration: 1.5, ease: "easeOut", delay:0.5 }}
            >
       <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-[2fr,1fr] gap-10">
