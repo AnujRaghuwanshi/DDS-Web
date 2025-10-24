@@ -1,10 +1,12 @@
-import React, { useState } from "react"
+import React, {Suspense, lazy, useState } from "react"
 import Navbar from "./components/Navbar.jsx"
-import Hero from "./components/Hero.jsx"
-import About from "./components/About.jsx"
-import Gallery from "./components/Gallery.jsx"
-import ContactForm from "./components/ContactForm.jsx"
-import Footer from "./components/Footer.jsx"
+
+const Hero = lazy(() => import("./components/Hero"));
+const About = lazy(() => import("./components/About"));
+const Gallery = lazy(() => import("./components/Gallery"));
+const ContactForm = lazy(() => import("./components/ContactForm"));
+const Footer = lazy(() => import("./components/Footer"));
+
 import { I18nProvider } from "./components/i18n.jsx"
 import SoundLayer from "./components/SoundLayer";
 import SplashScreen from "./components/SplashScreen";
@@ -19,6 +21,7 @@ export default function App() {
         <SplashScreen onFinish={() => setIsLoading(false)} />
         
       ) : (
+         <Suspense fallback={<div className="text-center p-10 text-amber-400">Loading...</div>}>
         <div className="fade-in bg-background text-foreground min-h-screen">
           <Navbar />
           <main>
@@ -29,6 +32,7 @@ export default function App() {
           </main>
           <Footer />
         </div>
+        </Suspense>
       )}
       <SoundLayer />
     </I18nProvider>

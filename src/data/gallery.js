@@ -2,7 +2,7 @@ export const galleryData = [
   {
     year: 2025,
     photos: [
-      "/images/gallery/2025-1.jpg",
+      "https://res.cloudinary.com/dku72t1ue/image/upload/v1747161974/myfiles/calloc-function-in-c_i76db6.png",
       "/images/gallery/2025-2.jpg",
       "/images/gallery/2025-3.jpg",
       "/images/gallery/2025-4.jpg"

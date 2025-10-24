@@ -1,10 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import durgaMa from "../assets/maa.jpg";
+import durgaMa from "@/assets/maa.jpg";
 import Flower from "./Flower";
-import marigold1 from "../assets/flowers/f61004b9-c04b-4d54-9f02-53f0d2709cd8-removebg-preview.png";
-import marigold2 from "../assets/flowers/pink-flower-white-background-removebg-preview.png";
-import lotus from "../assets/flowers/top-view-pink-flower-with-drops-removebg-preview.png";
 import Fireworks from "./Fireworks";
 
 export default function SplashScreen({ onFinish }) {
@@ -15,7 +12,10 @@ export default function SplashScreen({ onFinish }) {
     return () => clearTimeout(timer);
   }, [onFinish]);
 
-  const flowers = [marigold1, marigold2, lotus];
+  const flowers = [
+    "https://res.cloudinary.com/dku72t1ue/image/upload/v1761294300/top-view-pink-flower-with-drops-removebg-preview_bnxbk7.png", 
+    "https://res.cloudinary.com/dku72t1ue/image/upload/v1761294298/pink-flower-white-background-removebg-preview_wonjyo.png",
+    "https://res.cloudinary.com/dku72t1ue/image/upload/v1761294298/f61004b9-c04b-4d54-9f02-53f0d2709cd8-removebg-preview_mtooit.png"];
 
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center bg-black text-white z-[9999]">
